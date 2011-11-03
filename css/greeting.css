@@ -1,0 +1,75 @@
+/*
+*   COPYRIGHT 2011 Vincent Dumas
+*   COPYRIGHT 2011 Alex Zylman
+*
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height:100%;
+}
+
+body {
+    background: url('/images/rodin.png') no-repeat;
+    height:100%;
+    background-size:contain;
+    width:100%;
+    min-height: 635px; /* height of #page + top of #page */
+    height: auto;
+}
+
+#page {
+    position:relative;
+    color: #444;
+    width: 800px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 25px;
+    background: rgb(255, 255, 255); /* rgba is only supported in ie9+, provide a fallback color */
+    background: rgba(255, 255, 255, .8);
+    text-align: left;
+    height: 560px;
+    top: 30px;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, .4);
+}
+
+h1 {
+    font-size: 600%;
+    font-style: italic;
+    font-family: 'Droid Serif', serif;
+}
+
+h2 {
+    font-size: 300%;
+    font-style: italic;
+    font-family: 'Droid Serif', serif;
+}
+
+a.large {
+    padding: 14px 34px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+#text {
+    font-size: 300%;
+}
+
+#description {
+    margin-top: 20px;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#login {
+    width: 160px;
+    top: 157px;
+}

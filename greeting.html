@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="author" content="Vincent Dumas, Alex Zylman"/>
+    <meta name="keywords" content="stickynotes,webnotes,notes,html5,sticklet,sticklets,online,stickies,post-it,post,webnote,sticky,share,access anywhere,save,log in, google account"/>
+    <meta name="description" content="Sticklet: Notes you can take anywhere"/>
+    <title>Sticklet</title>
+    <link type="text/css" rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/css/greeting.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif'
+    rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-25329629-1']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+<body id="noteArea">
+    <div id="page">
+        <h1>Sticklet</h1>
+        <h2>Take your ideas with you</h2>
+        <div id="description">
+            <p>Sticklet is a cloud-based notes storage allowing you to view
+            and edit your sticky notes from any device with an internet
+            connection. You can even access your sticklets offline using the latest
+            and greatest technology in HTML5!</p>
+            <p>Whether it's your idea for The Next Big Thing or just your
+            grocery list, Sticklet is the best way to keep track of your
+            thoughts. Log in with your Google account to get writing, or try
+            out the demo note below.</p>
+        </div>
+        <a href="{{ url }}" class="button enabled large" id="login">
+            <div id="text">Login</div>
+            <div id="subtext">Using your Google account</div>
+        </a>
+    </div>
+    <div class="menu">
+      <div class="topBox">
+	<div class="colorSq" style="background-color:{{ color1 }}"></div><div class="colorSq" style="background-color:{{ color2 }}"></div><div class="colorSq" style="background-color:{{ color3 }}"></div><div class="colorSq" style="background-color:{{ color4 }}"></div><div class="colorSq" style="background-color:{{ color5 }}"></div><div class="colorSq" style="background-color:{{ color6 }}"></div>
+      </div>
+      <a class="button enabled" id="list" style="width: 45px;">List</a>
+      <div style="margin-top: 2px;"></div>
+      <a class="button enabled" id="share" style="width: 45px;">Share</a>
+      <div style="margin-top: 2px;"></div>
+      <a class="button enabled" id="archive">Archive</a>
+    </div>
+    <div id="copy">
+      &copy;Sticklet.com
+    </div>
+</body>
+<script type="text/javascript" src="/js/jquery.js">
+</script>
+<script type="text/javascript" src="/js/jquery.overlaps.min.js">
+</script>
+<script type="text/javascript" src="/js/demo.js">
+</script>
+<script type="text/javascript" src="/js/main.js">
+</script>
+</html>

@@ -1,0 +1,58 @@
+application: sticklet-notes
+version: 9
+runtime: python
+api_version: 1
+
+inbound_services:
+- channel_presence
+
+handlers:
+- url: /css
+  static_dir: css
+
+- url: /js
+  static_dir: js
+
+- url: /images
+  static_dir: images
+
+- url: /notes
+  script: notes.py
+
+- url: /notes/trash
+  script: notes.py
+
+- url: /notes/delete
+  script: delete.py
+
+- url: /notes/trash/delete
+  script: delete.py
+
+- url: /greeting
+  script: main.py
+
+- url: /_ah/channel/.*
+  script: notes.py
+
+- url: /share
+  script: notes.py
+
+- url: /channel
+  script: main.py
+
+- url: /manifest
+  static_files: manifest
+  mime_type: text/cache-manifest
+  upload: manifest
+  expiration: "0s"
+
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
+
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt
+
+- url: /.*
+  script: main.py

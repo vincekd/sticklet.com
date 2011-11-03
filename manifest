@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# version: 9
+
+CACHE:
+/
+/css/main.css
+/js/main.js
+/js/mobile.js
+/js/jquery.js
+/js/jquery.overlaps.min.js
+/images/context.png
+/favicon.ico
+
+NETWORK:
+*

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--<html manifest="manifest">-->
+<html>
+    <head>
+      <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+      <meta name="author" content="Vincent Dumas, Alex Zylman"/>
+      <meta name="keywords" content="stickynotes,webnotes,notes,html5,sticklet,sticklets,online,stickies,post-it,post,webnote,sticky,share,access anywhere,save,log in, google account"/>
+        <meta name="description" content="Sticklet: Notes you can take anywhere"/>
+        <title>Sticklet</title>
+        <link type="text/css" rel="stylesheet" href="/css/main.css" />
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-25329629-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	  var username = "{{ user }}";
+	</script>
+    </head>
+    <body class="noSelect">
+      <div id="menus">
+        <div id="toolbar">
+          <div id="lefties">
+            <a id="manage" class="button enabled">Archive</a>
+            <a id="undo" class="button left disabled">Undo</a>
+            <a id="redo" class="button right disabled">Redo</a>
+          </div>
+	  <div id="searcharea">
+	    <input type="text" id="searchbox" class="textbox left">
+	    <a id="search" class="button enabled right">Search</a>
+	  </div>
+          <div id="righties">
+            <a id="help" class="button enabled">Help</a>
+            <a id="logout" href="{{ url }}" class="button enabled">Logout</a>
+          </div>
+        </div>
+        <div id="managemenu">
+          <div class="centered">
+            <h3>Archived Sticklets</h3>
+	    <div>
+              <input type="checkbox" class="trash_checkbox" id="check_all">
+              <label for="check_all">Check/Uncheck All</label>
+	    </div>
+            <hr>
+          </div>
+          <div id="archived_content">
+          </div>
+          <div class="trash_button">
+            <a class="button left disabled" id="archive_delete">Delete</a>
+            <a class="button right disabled" id="archive_restore">Restore</a>
+          </div>
+        </div>
+	<div id="saved"><div>Saved</div></div>
+      </div>
+      <div id="noteArea">
+	<div class="menu">
+	  <div class="topBox">
+	    <div class="colorSq" style="background-color:{{ color1 }}"></div><div class="colorSq" style="background-color:{{ color2 }}"></div><div class="colorSq" style="background-color:{{ color3 }}"></div><div class="colorSq" style="background-color:{{ color4 }}"></div><div class="colorSq" style="background-color:{{ color5 }}"></div><div class="colorSq" style="background-color:{{ color6 }}"></div>
+	  </div>
+	  <a class="button enabled" id="list" style="width: 45px;">List</a>
+	  <div style="margin-top: 2px;"></div>
+	  <a class="button enabled" id="share" style="width: 45px;">Share</a>
+	  <div style="margin-top: 2px;"></div>
+	  <a class="button enabled" id="archive">Archive</a>
+	</div>
+      </div>
+      <div id="copy">
+	&copy;Sticklet.com
+      </div>
+      <div id="help_overlay" class="overlay">
+	<div id="help_menu">
+	  <div id="exit_help"><a class="button enabled">X</a></div>
+	  <div id="help_text" class="yesSelect">
+	    <h1>Help</h1>
+            <h3>Tips</h3>
+            <ul>
+	      <li>Double-click to create a new sticklet at the mouse position.</li>
+	      <li>Visit the archive menu to permanently delete or
+		restore a sticklet.</li>
+	      <li>Offline? You can move, color, and read your sticklets
+		in the browser!  No changes made when offline are
+		saved and will be changed back when next online.  Too
+		access your sticklets when you're offline, open your
+		browser and navigate the page as you normally
+		would.</li>
+	      <li>Share your sticklet with others by clicking the share
+	      button and typing in the email address.</li>
+	    </ul>
+            <h3>Shortcuts</h3>
+            <table>
+              <tr>
+                <td class="right-justify">ctrl+z</td><td>:</td><td>undo</td>
+              </tr>
+              <tr>
+                <td class="right-justify">ctrl+y</td><td>:</td><td>redo</td>
+              </tr>
+              <tr>
+                <td class="right-justify">shift+?</td><td>:</td><td>help menu</td>
+              </tr>
+              <tr>
+                <td class="right-justify">esc</td><td>:</td><td>save/close sticklet</td>
+              </tr>
+              <tr>
+                <td class="right-justify">shift-a</td><td>:</td><td>Open
+                archive menu</td>
+              </tr>
+            </table>
+	    <br>
+	    <div>Questions not answered here? Angry comments?
+	      Uncontainable praises?  Send them to us at <a href="mailto:info@sticklet.com">info@sticklet.com</a></div>
+	  </div>
+	  <div id="share_menu" class="yesSelect">
+	    <div id="email_share">
+	      <span class="share_size">Share Sticklet: </span>
+	      <label id="current_share" class="share_size"></label><br><br>
+	      <input type="text" id="sharebox" class="textbox left" placeHolder="Email Address">
+	      <a id="share_with" class="button enabled right">Share</a>
+	    </div>
+	    <h2>This sticklet is shared with:</h2>
+	    <div id="who_shared"><br>
+	    </div>
+	  </div>
+	</div>
+      </div>
+    </body>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery.overlaps.min.js"></script>
+    <script type="text/javascript" src="/_ah/channel/jsapi"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+</html>
